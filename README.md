@@ -20,18 +20,19 @@
 
 ## Items テーブル
 
-| Column              | Type       | Options                         |
-| --------            | ------     | -----------                     |
-| name                | string     | null: false                     |
-| image               | string     | null: false                     |
-| price               | integer    | null: false                     |
-| user                | references | null: false, foreign_key: true  |
-| category_id         | integer    | null: false                     |
-| status_id           | integer    | null: false                     |
-| explanation         | text       | null: false                     |
-| burden_id           | integer    | null: false                     |
-| prefectures_id      | integer    | null: false                     |
-| days_until_shipping | date       |                                 |
+| Column                 | Type       | Options                         |
+| --------               | ------     | -----------                     |
+| name                   | string     | null: false                     |
+| image                  | string     | null: false                     |
+| price                  | integer    | null: false                     |
+| user                   | references | null: false, foreign_key: true  |
+| category_id            | integer    | null: false                     |
+| status_id              | integer    | null: false                     |
+| explanation            | text       | null: false                     |
+| burden_id              | integer    | null: false                     |
+| prefectures_id         | integer    | null: false                     |
+| days_until_shipping_id | integer    |                                 |
+
 ### Association
 
 - has_one    :Purchase
