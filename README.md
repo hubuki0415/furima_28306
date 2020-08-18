@@ -46,11 +46,11 @@
 
 ### Association
 
-- has_one    :Street address
+- has_one    :Street_address
 - belongs_to :User
 - belongs_to :Item
 
-## Street address テーブル
+## Street_address テーブル
 
 | Column             | Type       | Options                        |
 | --------           | ------     | -----------                    |
