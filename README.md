@@ -38,7 +38,7 @@
 - has_one    :Purchase
 - belongs_to :User
 
-## Purchase テーブル
+## Purchases テーブル
 
 | Column               | Type       | Options                        |
 | --------             | ------     | -----------                    |
@@ -51,7 +51,7 @@
 - belongs_to :User
 - belongs_to :Item
 
-## Street_address テーブル
+## Street_addresses テーブル
 
 | Column             | Type       | Options                        |
 | --------           | ------     | -----------                    |
