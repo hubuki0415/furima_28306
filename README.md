@@ -5,13 +5,13 @@
 | Column               | Type   | Options     |
 | --------             | ------ | ----------- |
 | first_name           | string | null: false |
-| family_name          | string | null: false |
+| last_name            | string | null: false |
 | email                | string | null: false |
 | password             | string | null: false |
 | nickname             | string | null: false |
 | birth_bay            | date   | null: false |
 | first_name_kana      | string | null: false |
-| family_name_kana     | string | null: false |
+| last_name_kana       | string | null: false |
 
 ### Association
 
