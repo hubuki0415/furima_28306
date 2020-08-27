@@ -16,4 +16,5 @@ class Item <  ActiveRecord::Base
   validates :burden_id, numericality: { other_than: 0 } 
   validates :prefectures_id, numericality: { other_than: 0 } 
   validates :days_until_shipping_id, numericality: { other_than: 0 } 
+  validates :price, inclusion: { in: 300..9999999 }
 end
