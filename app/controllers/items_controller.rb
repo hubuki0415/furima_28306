@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_item, only: [ :show]
+  before_action :set_item, only: [:destroy,:show]
 
   def index  # indexアクションを定義した
     @item=Item.all.order("created_at ASC")
@@ -21,6 +21,8 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    @item.destroy
+    redirect_to root_path
   end
 
   def show
@@ -35,7 +37,7 @@ class ItemsController < ApplicationController
   end
 
   def set_item
-    @item=Item.find(params[:id])
+    @item = Item.find(params[:id])
   end
   
 end
