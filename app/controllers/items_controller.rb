@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index  # indexアクションを定義した
-    @item=Item.all
+    @item=Item.all.order("created_at ASC")
   end
 
   def new
