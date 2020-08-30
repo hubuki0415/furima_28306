@@ -14,17 +14,17 @@ class ItemsController < ApplicationController
     
     @item = Item.new(item_params)
     if @item.save!
-      redirect_to root_path
+       redirect_to root_path
     else
-      render :new
+       render :new
     end
   end
 
   def destroy
      if @item.destroy
-    redirect_to root_path
+        redirect_to root_path
     else
-      render :show
+        render :show
    end
  end
   def show
