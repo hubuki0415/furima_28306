@@ -47,21 +47,21 @@
 
 ### Association
 
-- has_one    :street_address
+- has_one    :address
 - belongs_to :user
 - belongs_to :item
 
-## Street_addresses テーブル
+## Addresses テーブル
 
 | Column             | Type       | Options                        |
 | --------           | ------     | -----------                    |
 | postal_code        | string     | null: false                    |
 | phone_number       | string     | null: false                    |
+| municipalities     | string     | null: false                    |
+| street_addresses   | string     | null: false                    |
+| building_name      | string     |                                |
 | purchase           | references | null: false, foreign_key: true |
 | prefectures_id     | integer    | null: false                    |
-| municipalities     | string     | null: false                    |
-| address            | string     | null: false                    |
-| building_name      | string     |                                |
 
 ### Association
 
