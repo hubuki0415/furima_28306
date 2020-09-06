@@ -1,7 +1,10 @@
 class PurchaseAddress
 
   include ActiveModel::Model
-  attr_accessor :user_id,:item_id,:postal_code,:phone_number,:municipalities,:street_addresses,:building_name,:purchase,:prefectures_id,:token
+  attr_accessor :user_id,:item_id,:postal_code,:phone_number,:municipalities,:street_addresses,:building_name,:purchase_id,:prefectures_id,:token
+  haihunn = /\A\d{3}[-]\d{4}\z/
+  haihunnasi = /\A\d{11}\z/
+
 
   with_options presence: true do
   validates :token
@@ -9,9 +12,11 @@ class PurchaseAddress
   validates :phone_number
   validates :municipalities
   validates :street_addresses 
-  validates :purchase
   validates :prefectures_id
   end
+  validates :postal_code, format: {with: haihunn, message: "は-を入力してください。"}
+  
+  validates :phone_number, format: {with: haihunnasi, message: "は11桁で入力してください。"}
 
 
   def save
