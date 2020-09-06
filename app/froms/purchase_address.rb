@@ -6,14 +6,15 @@ class PurchaseAddress
   haihunnasi = /\A\d{11}\z/
 
 
-  with_options presence: true do
-  validates :token
-  validates :postal_code
-  validates :phone_number
-  validates :municipalities
-  validates :street_addresses 
-  validates :prefectures_id
-  end
+    with_options presence: true do
+      validates :token
+      validates :postal_code
+      validates :phone_number
+      validates :municipalities
+      validates :street_addresses 
+      validates :prefectures_id
+    end
+
   validates :postal_code, format: {with: haihunn, message: "は-を入力してください。"}
   
   validates :phone_number, format: {with: haihunnasi, message: "は11桁で入力してください。"}
