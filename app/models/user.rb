@@ -19,4 +19,5 @@ class User < ApplicationRecord
         end
           validates :password, format: {with: hankaku, message: "は半角英数字も入れてください。"}
           has_many   :items
+          has_many   :purchases
 end
