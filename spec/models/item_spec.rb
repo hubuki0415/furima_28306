@@ -10,12 +10,18 @@ RSpec.describe Item, type: :model do
  
 
  describe '商品の出品ががうまくいくこと' do
-    it "商品名、価格の情、商品の説明、カテゴリーの情報、商品の状態、配送料の負担、配送元の地域、配送までの日数があれば出品できる" do
+    it "画像、商品名、価格の情報、商品の説明、カテゴリーの情報、商品の状態、配送料の負担、配送元の地域、配送までの日数があれば出品できる" do
     
       expect(@item).to be_valid
     end
 
     describe '商品の出品ががうまくいかない場合' do
+
+      it '画像が必須であること' do
+        @item.image = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Image can't be blank")
+      end
 
       it '商品名が必須であること' do
         @item.name = nil

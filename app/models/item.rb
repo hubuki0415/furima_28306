@@ -9,7 +9,7 @@ class Item <  ActiveRecord::Base
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :days_until_shipping
 
-  validates :name,:price,:user,:category_id,:status_id,:explanation,:burden_id,:prefectures_id,:days_until_shipping_id, presence: true
+  validates :image,:name,:price,:user,:category_id,:status_id,:explanation,:burden_id,:prefectures_id,:days_until_shipping_id, presence: true
   
 
   validates :category_id, numericality: { other_than: 0 } 
