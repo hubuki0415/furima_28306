@@ -2,8 +2,8 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-
+         :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
+         
          zennkaku = /\A[ぁ-んァ-ン一-龥]/
          kana = /\A[ァ-ヶー－]+\z/
          hankaku = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i
@@ -20,4 +20,5 @@ class User < ApplicationRecord
           validates :password, format: {with: hankaku, message: "は半角英数字も入れてください。"}
           has_many   :items
           has_many   :purchases
+          has_many   :sns_credentials
 end
