@@ -14,7 +14,7 @@ class User < ApplicationRecord
             sns.user = user
             sns.save
           end
-          user
+          { user: user, sns: sns }
           end
          zennkaku = /\A[ぁ-んァ-ン一-龥]/
          kana = /\A[ァ-ヶー－]+\z/
