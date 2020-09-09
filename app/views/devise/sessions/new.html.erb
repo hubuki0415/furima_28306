@@ -1,7 +1,6 @@
 <%= render "shared/second-header"%>
 
-<%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post%>
-<%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
+
 
 <%= form_with  model: resource, url: user_session_path , method: :post, class: 'registration-main', local: true do |f| %>
 <div class='form-wrap'>
@@ -10,6 +9,8 @@
       会員情報入力
     </h1>
   </div>
+  <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post, class: "facebook-logo"%>
+  <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post, class: "google-logo"%>
   <div class='login-flash-message'>
     <%= flash[:notice] %>
     <%= flash[:alert] %>

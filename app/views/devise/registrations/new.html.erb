@@ -7,8 +7,9 @@
       会員情報入力
     </h1>
   </div>
-    <%= link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post%>
-    <%= link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post%>
+    <%= link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post, class: "facebook-logo"%>
+    <%= link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post, class: "google-logo"%>
+
   
   <%= render 'shared/error_messages', model: f.object %>
   
