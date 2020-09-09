@@ -24,18 +24,8 @@
   color: #747487;
   position: relative;
 }
-.fa fa-google{
-  content: "";
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  left: 12px;
-  top: 11px;
-  -webkit-background-size: 18px 18px;
-  background-size: 18px 18px;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
+
+
 
 .facebook-logo{
   display: block;
