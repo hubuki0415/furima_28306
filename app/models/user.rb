@@ -10,7 +10,11 @@ class User < ApplicationRecord
             nickname: auth.info.name,
               email: auth.info.email
           )
-          
+          if user.persisted?
+            sns.user = user
+            sns.save
+          end
+          user
           end
          zennkaku = /\A[ぁ-んァ-ン一-龥]/
          kana = /\A[ァ-ヶー－]+\z/
