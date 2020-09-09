@@ -17,6 +17,7 @@
 
 - has_many   :items
 - has_many   :purchases
+- has_many   :sns_credentials
 
 ## Items テーブル
 
@@ -66,3 +67,15 @@
 ### Association
 
 - belongs_to :purchase
+
+## Sns_credentials テーブル
+
+| Column               | Type       | Options                        |
+| --------             | ------     | -----------                    |
+| provider             | string     | null: false,                   |
+| uid                  | string     | null: false,                   |
+| user                 | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
